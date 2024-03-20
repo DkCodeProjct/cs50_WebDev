@@ -1,0 +1,125 @@
+#divName {
+    background-color:  #c5d3f1;
+    align-items: center;
+    margin: 20px;
+   
+    
+}
+
+h1 {
+    color: chocolate;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+h3 {
+    color: chocolate;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 5px;
+}
+
+#lifeDiv {
+    background-color: #cdccfd;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    width: 500px;
+    height: 150px;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align:  center;
+    margin: 10px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+td,th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px; 
+    color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#detail {
+    background-color:#ABCDEF;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 170px;
+    height: 450px;
+    margin: 20px;
+}
+
+h4 {
+    font-size: x-large;
+    color: black;
+    text-align: center;
+}
+ol {
+    color: darkgreen;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 25px;
+    text-align: left;
+    font-size: large;
+    
+}
+
+ul {
+   color: rgb(45, 66, 7);
+   text-align: left;
+   padding: 18px;
+   
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h5 {
+    text-align: center;
+    color: blue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+button {
+    background-color: rgb(127, 236, 127);
+    width: 70;
+    height: 40;
+    font-size: 24px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+.btton1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+button:hover {
+    background-color: rgb(0, 136, 45);
+ 
+}
