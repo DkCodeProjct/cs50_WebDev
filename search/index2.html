@@ -1,0 +1,56 @@
+<!--advanced search page-->
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <link rel="stylesheet" href="index2.css">
+    <title>Google Advanced Search</title>
+</head>
+<body>
+    <div id="linkdiv">
+        <a href="index.html">home</a>
+    </div>
+    <h3>find pages with</h3>
+    <form action="https://www.google.com/search" method="get">
+        <div class="group">
+            
+            <div class="field-group">
+                
+                <p class="label">all these words:</p>
+                <input type="text" name="as_q" class="input">
+                <p id="p2">Type the important words: tri-colour rat terrier</p>
+            
+            </div>
+            
+            <div class="field-group">
+                
+                <p class="label">any of these words:</p>
+                <input type="text" name="as_oq" class="input">
+                <p id="p2">Type OR between all the words you want: miniature OR standard</p>
+            
+            </div>
+            
+            <div class="field-group">
+                
+                <p class="label">this exact word or phrase:</p>
+                <input type="text" name="as_epq" class="input">
+                <p id="p2">Put exact words in quotes: "rat terrier"</p>
+            
+            </div>
+            
+            <div class="field-group">
+                
+                <p class="label">none of these words:</p>
+                <input type="text" name="as_eq" class="input">
+                <p id="p2">Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</p>
+            
+            </div>
+        </div>
+        
+            
+       
+        <button type="submit">advanced search</button>
+    </form>
+</body>
+
+</html>
