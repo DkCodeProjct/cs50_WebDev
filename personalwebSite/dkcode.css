@@ -1,0 +1,162 @@
+@font-face {
+  font-family: 'Albori-Thin';
+  src: url('/home/dkcode/Downloads/Albori-Light.woff');
+}
+
+.background-image {
+    /* Set the background image */
+    background-image: url("/home/dkcode/Music/6995383b37b2d3b859ae480e698b8f1b.jpg");
+    /* Adjust background properties */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image */
+    /* Adjust height and width as needed */
+    height: 60%; /* Set the height of the container */
+    width: 100%; /* Set the width to fill the entire viewport */
+    /* Ensure content doesn't overflow */
+    position: relative;
+    top: 0;
+
+    flex: auto;
+    
+   
+  }
+  
+  #name {
+    /* Style the h1 element */
+    color: rgb(226, 235, 255); 
+    text-align: left;
+    padding: 15px;
+    font-family: Albori-Thin;
+    
+  
+  }
+
+#mainTag {
+    text-align: center;
+    font-size: 80px;
+    color: rgb(251, 255, 0);
+    font-family: Albori-Thin;
+}
+#mainTag:hover {
+    color: blueviolet;
+   
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #9900ff;
+  color: rgb(255, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  /* Remove width: 100%; */
+  /* Remove margin: 0 auto; */
+  font-size: 18px;
+  position: absolute; /* Position the button absolutely */
+  right: 50%; /* Position the button to the center horizontally */
+  transform: translateX(50%); 
+  }
+
+button:hover {
+    background-color: dodgerblue;
+    float: none;
+}
+
+#link {
+    color: azure;
+    text-decoration: none;
+}
+
+#linktop1{
+    color: blue;
+    text-align: top;
+}
+
+#alink {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  border: 20px;
+  margin: 10px;
+  text-align: justify;
+  padding-right: 10px;
+  margin-right: 10px;
+  
+
+
+}
+#righta,#youtube,#cs50{
+  text-decoration: none;
+  padding-left: 5px;
+  font-size: 20px;
+  font-family: Albori-Thin;
+  color: rgb(255, 255, 255);
+
+
+}
+#righta:hover,#youtube:hover,#cs50:hover{
+  color: rgb(255, 0, 0);
+}
+
+#imagediv {
+  
+  
+  position: relative;
+  top: 100px;
+  height: 100%; 
+  width: 100%;
+  
+  overflow: visible;  
+  }
+  #photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 700px;
+    height: 350px;
+  }
+  h4 {
+    font-family: Albori-Thin;
+    text-align: center;
+    font-size: 24px;
+    padding: 0px;
+  }
+  ul {
+    text-align: center;
+    padding-left:0px;
+    margin-left: 530px;  /* Adjust the value as needed to move the list to the right */
+    flex: auto;
+}
+
+  li {
+    text-align: left;
+    max-width: 300px;
+    font-family: Albori-Thin;
+    padding: 9px;
+    flex: auto;
+    color: black;
+  }
+
+#bottomDiv {
+  background-size: cover;
+  background-color: #505f9e;
+  width: 100%;
+  height: 85px;
+  position: relative;
+  bottom: 0;
+  
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+  
+  }
+  #a1, #a2, #a3, #a4 {
+    padding: 10px;
+    align-items: center;
+    
+  }

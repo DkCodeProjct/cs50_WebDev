@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'thintxt';
+    src: url(/home/dkcode/Downloads/Aileron-Black.otf);
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url(/home/dkcode/Downloads/Albori-Thin.woff);
+}
+
+.maindivmind {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    }
+    #mind {
+        margin-top: 200px;
+        width: 468;
+        height: 468;
+    }
+    #words {
+        position: absolute;
+        top: 0;
+        right: 400px;
+        margin-top: 90px;
+        font-family: 'proxima-nova';
+        font-size: 40px;
+        color: brown;
+        font-weight: bold;
+    }
+    #word {
+        position: absolute;
+        top: 0;
+        right: 600;
+        margin-top: 690px;
+        display: flex;
+        font-family: 'proxima-nova';
+        font-weight: bolder;
+        font-size: larger;
+        color: brown;
+        font-size: 30px;
+    }
+    #linkhome {
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: black;
+        text-decoration: none;
+        font-family: 'proxima-nova';
+        padding-top: 30px;
+        padding-right: 50px;
+        font-size: 25px;
+        display: flex;
+    }
+    #nameleft {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        padding-bottom: 5px;
+        padding-left: 40px;
+        font-size: 35px;
+        font-family: 'thintxt';
+        color: darkorange;
+
+    }
+    
+
+    /* learn how to center p inside div and make page responsive for min scren*/

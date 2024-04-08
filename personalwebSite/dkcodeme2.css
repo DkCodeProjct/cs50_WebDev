@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'thintxt';
+    src: url(/home/dkcode/Downloads/Aileron-Black.otf);
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url(/home/dkcode/Downloads/Albori-Thin.woff);
+}
+@media screen and (max-width: 600px) {
+    #name {
+        font-size: 40px;
+    }
+    #cs50 {
+        width: 300,300;
+    }
+    /* Add more rules as needed */
+}
+
+.maindiv50 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+  
+    }
+    #cs50 {
+        margin-top: 200px;
+        width: 700px;
+        height: 450px;
+    }
+    #name {
+        font-family: 'thintxt';
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: darkorange;
+        font-size: xx-large;
+        margin-left: 30px;
+        margin-top: 30px;
+
+    }
+    #discript {
+        position: absolute;
+        top: 0;
+        right: 400;
+        margin-top: 120px;
+        font-family: 'proxima-nova';
+        font-size: 40px;
+        color: brown;
+        font-weight: bold;
+    }
+    #home {
+        text-decoration: none;
+        color: aliceblue;
+        padding: 20px;
+    }
+    #btnhome {
+        
+        top: 0;
+        right: 0;
+        position: absolute;
+        text-decoration: none;
+        font-size: x-large;
+        margin-top: 30px;
+        margin-right: 50px;
+        border-radius: 7px;
+        background-color: darkorange;
+       border: 0;
+        
+        
+    }
+    #topic {
+        position: absolute;
+        top: 0;
+        right: 600;
+        margin-top: 690px;
+        display: flex;
+        font-family: 'proxima-nova';
+        font-weight: bolder;
+        font-size: larger;
+        color: brown;
+        font-size: 30px;
+
+    }
+    
+.imgdiv {
+        text-align: center; /* Center align the content */
+    }
+    
+    .imgdiv img {
+        display: block; /* Ensure image is a block element */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+    
+    .imgdivul {
+        list-style-type: none; /* Remove default list styles */
+        padding: 0; /* Remove default padding */
+        margin: 0; /* Reset margin */
+        display: flex; /* Use flexbox */
+        flex-direction: column; /* Arrange list items vertically */
+        align-items: center; /* Center content horizontally */
+    }
+    
+    #pword {
+        margin-top: 10px; /* Add spacing between list items */
+        text-align: center; /* Align text of list items to the left */
+    }
+    
