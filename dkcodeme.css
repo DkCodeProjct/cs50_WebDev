@@ -1,0 +1,449 @@
+/*color: #201a16;*/
+@font-face {
+    font-family: 'proxima-nova';
+    src: url(/home/dkcode/Downloads/Albori-Thin.woff);
+}
+@font-face {
+    font-family: 'aileron-thin';
+    src: url(/home/dkcode/Downloads/Aileron-Black.otf);
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    z-index: 1; /* Ensure menu appears above other elements */
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.menu a:hover {
+    background-color: #f2f2f2;
+}
+
+.menu-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.menu-icon-bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.show-menu {
+    display: block; /* Ensure menu is visible when "show-menu" class is applied */
+}
+
+@media screen and (min-width: 769px) {
+    .menu {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 10px;
+        min-width: 200px;
+    }
+    .menu a {
+        display: block;
+        padding: 10px 20px;
+        color: #000;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    .menu-icon {
+        display: none;
+    }
+}
+
+
+
+
+.maindiv {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    
+    }
+    #image {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+
+    }
+    #mainp {
+        font-family:  'proxima-nova';
+        position: absolute;
+        color: rgb(46, 47, 54);
+        font-size: 70px;
+        font-weight: bolder;
+    }
+    #name {
+        font-family:  'proxima-nova';
+        position: absolute;
+        color: rgb(47, 50, 54);
+        font-size: 30px;
+        font-weight: bolder;
+        padding-bottom: 130px;
+
+    }
+    #nameleft {
+        color: rgb(58, 59, 66);
+        font-family: 'aileron-thin';
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding-left: 35px;
+        padding-top: 10px;
+        
+        font-size: 30px;
+        
+    }
+    .btn {
+        position: absolute;
+        color: rgb(88, 88, 88);
+        margin-top: 150px;
+        border-color: rgb(255, 255, 255);
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 0px; 
+        font-size: 30px;
+        background-color:rgb(184, 185, 190);
+        
+    
+    }
+
+    
+    #github {
+        text-decoration: none;
+        color: rgb(252, 253, 252);
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        
+    
+    }
+/* For smaller screens */
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+    #mainp {
+        font-size: 30px; /* Adjust as needed */
+    }
+    
+    #name {
+        font-size: 20px; /* Adjust as needed */
+        padding-bottom: 60px; /* Adjust as needed */
+    }
+
+    #nameleft {
+        font-size: 20px; /* Adjust as needed */
+        padding-left: 20px; /* Adjust as needed */
+        padding-top: 15px; /* Adjust as needed */
+    }
+
+    .btn {
+        margin-top: 110px; /* Adjust as needed */
+        font-size: 20px; /* Adjust as needed */
+    }
+}
+
+/* ai image --> */
+.container {
+    text-align: center; /* Center everything in the container */
+    width: 100%; /* Use full width to prevent overflow */
+}
+
+#aiimage {
+    width: 600px; /* Default width */
+    height: 480px; /* Default height */
+    max-width: 100%; /* Ensures the image is responsive and does not overflow the container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.main-point {
+    font-size: 30px; /* Default font size */
+    padding-top: 30px; /* Default top padding */
+}
+
+.pword {
+    font-size: 20px; /* Default font size for list items */
+    margin-top: 10px; /* Add margin top to separate list items */
+}
+
+/* Responsive Styles for smaller screens */
+@media (max-width: 768px) {
+    #aiimage {
+        width: 450px; /* Full width on smaller screens */
+        height: 200px; /* Adjust height automatically */
+    }
+
+    .main-point {
+        font-size: 20px; /* Smaller font size on smaller screens */
+        padding-top: 20px; /* Reduced padding top */
+    }
+
+    .pword {
+        font-size: 16px; /* Smaller font size for list items on smaller screens */
+    }
+}
+
+/*
+.bcover {
+   
+      display: flex;
+      justify-content: space-between;  
+      margin-top: 50px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+   
+    #cover0, #cover1, #cover2 {
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+        border-radius: 20px;
+        
+    }
+    
+    
+    #topimage{
+        position: absolute;
+      
+        width: 250px;
+        height: 250px;
+       
+        left: 30px;
+        top: 40px;
+        border-radius: 30px;
+
+        
+    }
+    #toptext {
+        position: absolute;
+        top: 280px;
+        left: 100;
+        font-family: 'proxima-nova';
+        font-size: xx-large;
+        white-space: normal;
+        word-wrap: break-word;
+        
+
+    }
+
+    #toptext1 {
+        position: absolute;
+        top:320px;
+        left: 60px;
+        font-family: 'proxima-nova';
+        font-size: xx-large;
+        white-space: normal;
+        word-wrap: break-word;
+        
+
+    }
+    #topimage1 {
+        position: absolute;
+        top: 50px;
+        left: 480px;
+        width: 250px;
+        height: 250px;
+        border-radius: 30px;
+
+    }
+    #toptext11 {
+        position: absolute;
+        top:300px;
+        left: 500px;
+        font-family: 'proxima-nova';
+        font-size: large;
+        white-space: large;
+        font-size: xx-large;
+        font-weight: bolder;
+      
+
+        
+    }
+    
+    #topimage112 {
+        position: absolute;
+        top:340px;
+        left: 480px;
+        font-family: 'proxima-nova';
+        font-size: xx-large;
+        white-space: normal;
+        word-wrap: break-word;
+        font-weight: bolder;
+        
+        
+
+    }
+
+    #topimage2 {
+        position: absolute;
+        top: 45px;
+        left: 925px;
+        width: 250px;
+        height: 280px;
+        border-radius: 30px;
+        ;
+    }
+
+    #imagetxt2 {
+        position: absolute;
+        top:300px;
+        left: 920px;
+        font-family: sans-serif;
+        font-size: xx-large;
+        font-weight: bolder;
+        
+        
+        font-family: 'proxima-nova';
+
+    }
+
+    
+    .bottomrow {
+        background-size: cover;
+        background-color: #505f9e;
+        width: 100%;
+        height: 85px;
+        position: relative;
+        bottom: 100px;
+        top: 130px;
+        margin-bottom: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+
+    }
+
+
+    div {
+        text-align: center; 
+    }
+    
+    p {
+        
+        margin: 0 auto;
+        margin-top: 30px;
+        font-family: 'proxima-nova';
+        font-size: xx-large;
+        font-weight: bolder; 
+    }
+    
+    .pword {
+        text-align: left;
+        font-family: 'proxima-nova'; 
+        font-size: xx-large;
+        font-weight: bolder;   
+        margin-left: 300px; 
+    }
+    
+    ul {
+        margin-top: 25px;
+        list-style-position: inside; 
+        display: inline-block;
+        padding: 10px; 
+        padding-block: 10px;
+        text-align: center; 
+        padding-left: 300px;
+    }
+    
+    ul.pword {
+        left: 300px;
+        text-align: center; 
+    }
+    li {
+        margin-bottom: 10px;
+    }
+
+/*
+
+/* Base Styles */
+/* Base Styles */
+.bcover {
+    display: flex;
+    justify-content: space-between;  
+    margin-top: 50px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+#cover0, #cover1, #cover2 {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+#topimage,
+#topimage1,
+#topimage2 {
+    position: relative; /* Change to relative positioning */
+    width: 250px;
+    height: 250px;
+    border-radius: 30px;
+}
+
+/* Text Styles */
+.toptext,
+.toptext1,
+.toptext11,
+.toptext112,
+.imagetxt2 {
+    font-family: 'proxima-nova';
+    font-size: 20px; /* Default font size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .bcover {
+        flex-wrap: nowrap; /* Prevent wrapping of items */
+    }
+
+    #topimage,
+    #topimage1,
+    #topimage2 {
+        width: 150px; /* Smaller width for images on smaller screens */
+        height: 150px; /* Smaller height for images on smaller screens */
+    }
+
+    .toptext,
+    .toptext1,
+    .toptext11,
+    .toptext112,
+    .imagetxt2 {
+        font-size: 16px; /* Smaller font size for text on smaller screens */
+    }
+
+    #topimage {
+        margin-left: auto; /* Move to right on smaller screens */
+    }
+
+    #topimage1 {
+        margin-left: auto; /* Move to right on smaller screens */
+    }
+
+    #topimage2 {
+        margin-left: auto; /* Move to right on smaller screens */
+    }
+}
