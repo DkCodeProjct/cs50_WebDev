@@ -1,0 +1,44 @@
+#all-Posts {
+    color: blueviolet;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px;
+}
+#userName { 
+    padding-top: 10px;
+    padding-left: 10px;
+    color: blueviolet;
+}
+.newpost {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.allposts {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 30px;
+}
+
+.post {
+    border: 0.1px solid gray;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+.username {
+    font-size: 25px;
+}
+.postContent {
+    font-size: 20px;
+    margin: 10px;
+}
+.date {
+    font-size: 15px;
+    color: gray;
+    margin: 10px;
+}

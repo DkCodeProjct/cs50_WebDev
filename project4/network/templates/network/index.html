@@ -1,0 +1,163 @@
+{% extends "network/layout.html" %}
+{% load static%}
+
+
+{% block body %}
+
+    <script>
+        // js for save changes
+
+        function webCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length == 2) return parts.pop().split(';').shift();
+        }
+
+        function saveChanges(id) {
+            const txtAreaData = document.getElementById(`txtArea_${id}`).value;
+            const postContent = document.getElementById(`postContent_${id}`);
+            const modal = document.getElementById(`modal_editPost${id}`);
+            fetch(`/editPost/${id}`, {
+                method: "POST",
+                headers: {
+                    "Content-type": "application/json",
+                    "X-CSRFToken": webCookie("csrftoken")
+                },
+                body: JSON.stringify({
+                    postContent: txtAreaData
+                })
+            })
+            .then(res => res.json())
+            .then(result => {
+                postContent.innerHTML = result.data;
+
+                modal.classList.remove("show");
+                modal.setAttribute('aria-hidden', 'true')
+                modal.setAttribute('style','display: none')
+
+                const modalBackDrop= document.getElementsByClassName('modal-backdrop');
+
+                for(let i=0; i<modalBackDrop.length; i++) {
+                    document.body.removeChild(modalBackDrop[i])
+                }
+            })
+        }
+        
+        function updateLike(id,likeUser) {
+            const likeBtn = document.getElementById(`${id}`);
+            likeBtn.classList.remove('fa-thumbs-up');
+            likeBtn.classList.remove('fa-thumbs-down');
+
+            var liked = likeUser.indexOf(id) >= 0;
+
+            if (liked === true) {
+                fetch(`/rmLike/${id}`)
+                    .then(res => res.json())
+                    .then(result => {
+                        likeBtn.classList.add('fa-thumbs-up');
+                    });
+            } else {
+                fetch(`/adLike/${id}`)
+                    .then(res => res.json())
+                    .then(result => {
+                        likeBtn.classList.add('fa-thumbs-down');
+                    });
+            }
+            likeUser = !liked;
+        }
+
+    </script>
+
+    
+
+
+    <h1 id="all-Posts">all posts</h1>
+
+    {% if user.is_authenticated %}
+        <div class="newpost mx-5">
+            <h2>new post</h2>
+
+            <form action="{% url 'newPost' %}" method="post">
+                {% csrf_token %}
+                <textarea name="post" cols="50" rows="3"></textarea>
+                <input type="submit" value="post">
+            </form>
+        </div>
+    {% endif %}
+        <div class="allposts">
+        
+            {% for post in pgObject %}  <!-- pgObject===content of the page -->
+                
+                <div class="row post mx-5"> <!-- [mx-5] // boostrap properties -->
+                    <h3 class="username"><a href="{% url 'userProfile' userId=post.user.id %}">@{{ post.user.username }}</a></h3>
+                    
+                    <h2 class="postContent" id="postContent_{{post.id}}">{{ post.post }}</h2> <!-- the secont post. [post] represnt postContent-->
+                
+                    <p  class="date">Date:{{ post.date }}</p>
+                    
+                    {% if user.is_authenticated %}
+
+                        {% if user == post.user %}
+                            <div class="d-flex justify-content-around">
+                                <button class="btn btn-primary" data-toggle="modal" data-target="#modal_editPost{{post.id}}">edit</button>
+                            </div>
+
+                            <div class="modal fade" id="modal_editPost{{post.id}}" tabindex="-1" role="dialog" aria-labelledby="modal_editPost{{post.id}}_lable" aria-hidden="true"> <!-- boostrap popup modal-->
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title">edit post</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <textarea  class="form-control"  name="postContent" id="txtArea_{{post.id}}"  rows="10">{{ post.post }}</textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" onclick="saveChanges('{{post.id}}')">Save changes</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                    
+                                    
+                                    
+                                </div>
+                                </div>
+                            </div>
+
+                        {% else %} <!-- [ fa fa-thumbs-~~] // w3School like btn properties-->
+                            {% if post.id in likeUser %}
+                            <button class="btn btn-info fa fa-thumbs-down col-1" id="{{post.id}}" onclick="updateLike('{{post.id}}', '{{likeUser}}')"></button>
+
+                            {% else %}
+                            <button class="btn btn-info fa fa-thumbs-up col-1" id="{{post.id}}" onclick="updateLike('{{post.id}}', '{{likeUser}}')"></button>
+
+                            {% endif %}
+                        {% endif%}
+
+                    {% endif%}
+                
+                </div>
+            {% endfor %}
+        </div>
+
+        <nav aria-label="Page navigation example">
+            
+            <ul class="pagination d-flex justify-content-center">
+                
+                <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                
+                    {% if pgObject.has_previous %}
+                        <li class="page-item"><a class="page-link" href="?page={{ pgObject.previous_page_number }}">Previous</a></li>
+                    {% endif %}
+                    
+                    {% if pgObject.has_next %}
+                        <li class="page-item"><a class="page-link" href="?page={{ pgObject.next_page_number }}">Next</a></li>
+                    {% endif %}
+                
+                <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+            </ul>
+        </nav>
+
+
+{% endblock %}
