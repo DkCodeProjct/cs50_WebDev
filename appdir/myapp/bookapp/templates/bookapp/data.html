@@ -1,0 +1,35 @@
+{% extends "bookapp/layout.html" %}
+{% load static%}
+
+
+{% block body %}
+    <h1>Therapist Details</h1>
+    <ul>
+        {% for therapist in  therapists %}
+            <li>Name: {{ therapist.name }}</li>
+            <li>Age: {{ therapist.age }}</li>
+            <li>Location: {{ therapist.location }}</li>
+            <!-- Add other fields as needed -->
+            <br>
+        {% endfor %}
+    </ul>
+    <form method="post">
+        {% csrf_token %}
+        <!-- Hidden field for therapist ID -->
+        <input type="hidden" name="therapist" value="{{ therapist.id }}">
+        <!-- Patient input fields -->
+        <label for="patient_phone">Phone:</label>
+        <input type="text" id="patient_phone" name="patient_phone" required><br>
+        <label for="patient_address">Address:</label>
+        <input type="text" id="patient_address" name="patient_address" required><br>
+        <label for="patient_email">Email:</label>
+        <input type="email" id="patient_email" name="patient_email" required><br>
+        <!-- Session details input fields -->
+        <label for="date_for_session">Date for Session:</label>
+        <input type="datetime-local" id="date_for_session" name="date_for_session" required><br>
+        <label for="payment_method">Payment Method:</label>
+        <input type="text" id="payment_method" name="payment_method" required><br>
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-success">Book Session</button>
+    </form>
+{% endblock%}

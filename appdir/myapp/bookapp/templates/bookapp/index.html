@@ -1,0 +1,17 @@
+{% extends "bookapp/layout.html" %}
+{% load static%}
+
+
+{% block body %}
+
+    
+
+    <h1>Add Therapist</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+
+{% endblock %}
+
