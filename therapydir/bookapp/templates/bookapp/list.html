@@ -1,0 +1,18 @@
+{% extends 'bookapp/layout.html' %}
+
+{% block content %}
+    <h2>Therapists List</h2>
+    <div class="row">
+        {% for therapist in therapists %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="{% url 'data' therapist.id %}">{{ therapist.name }}</a></h5>
+                        <p class="card-text">{{ therapist.specialization }}</p>
+                        <a href="{% url 'book' therapist.id %}" class="btn btn-primary">Book Session</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

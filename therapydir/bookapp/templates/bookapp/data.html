@@ -1,0 +1,15 @@
+{% extends 'bookapp/layout.html' %}
+
+{% block content %}
+  <h2>{{ therapist.name }}</h2>
+  <p><strong>Age:</strong> {{ therapist.age }}</p>
+  <p><strong>Location:</strong> {{ therapist.location }}</p>
+  <p><strong>Email:</strong> {{ therapist.email }}</p>
+  <p><strong>Experience:</strong> {{ therapist.experience }}</p>
+  <p><strong>Specialization:</strong> {{ therapist.specialization }}</p>
+  <p><strong>University:</strong> {{ therapist.university }}</p>
+  <p><strong>License Number:</strong> {{ therapist.licenseNum }}</p>
+  <p><strong>Tradition:</strong> {{ therapist.tradition }}</p>
+  <p><strong>Price for Session:</strong> {{ therapist.priceForSession }}</p>
+  <p><strong>Description:</strong> {{ therapist.description }}</p>
+{% endblock %}
