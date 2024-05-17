@@ -1,0 +1,14 @@
+<!-- network/index.html -->
+{% extends "blogapp/layout.html" %}
+{% block body %}
+<h1>All Blog Posts</h1>
+<div class="list-group">
+    {% for post in posts %}
+    <a href="#" class="list-group-item list-group-item-action">
+        <h5 class="mb-1">{{ post.title }}</h5>
+        <p class="mb-1">{{ post.post|truncatewords:20 }}</p>
+        <small>by {{ post.user.username }} on {{ post.date }}</small>
+    </a>
+    {% endfor %}
+</div>
+{% endblock %}

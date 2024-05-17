@@ -1,0 +1,22 @@
+{% extends "blogapp/layout.html" %}
+      
+{% block body %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <!-- network/create_blog_post.html -->
+    
+      <h1>Create Blog Post</h1>
+      <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+     
+
+  </div>
+</div>
+
+{% endblock  %}
