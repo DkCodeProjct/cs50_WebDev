@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'thintxt';
+    src: url(/home/dkcode/Downloads/Aileron-Black.otf);
+}
+
+@font-face {
+    font-family: 'proxima-nova';
+    src: url(/home/dkcode/Downloads/Albori-Thin.woff);
+}
+
+
+ /* Custom styles if needed */
+ .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    outline: none; /* Remove default focus outline */
+}
+.navbar-toggler:focus {
+outline: none; /* Remove focus outline when clicked */
+}
+.custom-navbar-background {
+    background-color: #696969;
+    
+}
+.deepthi-img {
+    width: 50%;
+    height: auto;
+    max-width: 300px;
+}
+
+
+#toph1 {
+    margin-bottom: 40px;
+}
+
+#toph2 {
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.pword-btm {
+    margin-bottom: 22px;
+}
+ul.custom-bullets li {
+margin-top: 20px; /* Keeping the existing margin */
+padding-left: 10px; /* Add padding to create a gap between bullet and text */
+}
+
+ul.custom-bullets li::before {
+content: "•";
+font-size: 0.6em; /* Smaller bullet size */
+line-height: 1em; /* Align bullet vertically */
+color: black;
+padding-right: 10px; /* Add padding to create a gap between bullet and text */
+}
+
+ul.custom-bullets {
+list-style-type: none; 
+padding-left: 20px; /* Keeping the existing padding */
+}
+
+.col-md-6 {
+text-align: center;
+/*padding-left: 200px;*/
+}   
+
+
+@media (min-width: 992px) {
+.col-md-6 {
+text-align: left;
+padding-left: 0%;
+}
+}
+
+
+.bottomrow {
+    background-color:  #696969;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw; /* Ensure full viewport width */
+    margin: 0; /* Remove margin */
+}
+
+.bottomrow a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+.bottomrow {
+flex-direction: column;
+height: auto;
+}
+
+.bottomrow a {
+margin: 10px 0;
+}
+}
+
+#other-img {
+    max-width: 60%; /* Adjust max width for smaller screens */
+}
+#other-img {
+margin-bottom: 40px; /* Ensure gap between image and bottom row */
+}
+
+.image-wrapper {
+    padding: 0 10px; /* Add horizontal padding */
+}
+@media (max-width: 768px) {
+    .other-img {
+        max-width: 80%;
+        margin: 10px auto;
+        margin-bottom: 30px;
+
+    }
+    .certificate-img {
+        max-width: 90%;
+        margin: 10px auto;
+        margin-bottom: 20px;
+    }
+    .text-center  {
+        font-size: 24px; /* Smaller font size for small screens */
+    }
+}
+
+
+
+/* Default styling */
+hr.solid {
+border-top: 1px solid #C0C0C0;
+width: 90%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+hr.solid {
+width: 90%; /* Adjust the width for smaller screens */
+margin-left: 6%; /* Adjust the starting position */
+margin-right: 6%; /* Adjust the ending position */
+}
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+hr.solid {
+width: 80%; /* Further adjust the width for very small screens */
+margin-left: 10%; /* Further adjust the starting position */
+margin-right: 10%; /* Further adjust the ending position */
+}
+}
+
+#thank {
+font-size: 30px;
+
+}
+
