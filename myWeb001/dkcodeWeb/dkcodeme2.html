@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="dkcodeme2.css">
+</head>
+<body>
+
+    <div class="maindiv">
+        <nav class="nav">
+            <div class="nav__logo">DkCode</div>
+            <div class="nav__hamburger">
+                <span class="nav__hamburger__line"></span>
+                <span class="nav__hamburger__line"></span>
+                <span class="nav__hamburger__line"></span>
+            </div>
+            <div class="nav__menu">
+                <ul>
+                    <li class="nav__menu__link"><a href="dkcodeme2.html">cs50Me</a></li>
+                    <li class="nav__menu__link"><a href="dkcodeme3.html">mind</a></li>
+                    <li class="nav__menu__link"><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <br><br>
+    
+    <script>
+        const hamburger = document.querySelector(".nav__hamburger");
+        const navMenu = document.querySelector(".nav__menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+    </script>
+    
+
+      
+   
+    <div class="container mt-5">
+        <h1 class="text-center">I took CS50 through YouTube....</h1>
+        
+        <div class="row justify-content-center image-container">
+            <div class="col-md-8 text-center image-wrapper">
+                <img id="cs50" src="/home/dkcode/Music/CS50P.png" alt="CS50 Certificate" class="certificate-img img-fluid">
+            </div>
+        </div>
+        
+        <br><br>
+        <!-- cs50 ai img-->
+
+        <div class="row justify-content-center image-container">
+            <div class="col-md-8 text-center image-wrapper">
+                <img id="cs50" src="/home/dkcode/Music/CS50AI.png" alt="CS50AI Certificate" class="certificate-img img-fluid">
+            </div>
+        </div>
+        
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-8">
+                <ul class="custom-bullets" id="ul">
+                    cs50- Is the best Place for Beginners. And CustomiZble Education....
+                    <li id="pword">I learned how to break Complex problems into Smaller and Simple ones.</li>
+                    <li id="pword">The AI course provides a solid foundation in the basics Of AI for future DEV.</li>
+                    <li id="pword">Both course structure is Engaging and Have a ``Repeatable flow``.</li>
+                    <li id="pword">Each problem improved coding logic and how to Use Tools.</li>
+                    <li id="pword">Also, David and Brian are the best teachers I've ever had.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="solid">
+
+   
+        
+    
+
+
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8 text-center image-wrapper">
+            <p id="thank">~ Thank You  Brain </p>
+           
+            <img id="other-img" src="/home/dkcode/Music/maxresdefault.jpg" alt="prof Brain" class="other-img img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-8 text-center image-wrapper">
+            <p id="thank">~ Thank You  David</p>
+          
+            <img id="other-img" src="/home/dkcode/Music/1694048151602.jpeg" alt="prof david" class="other-img img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+    <!--
+    <div class="row justify-content-center mt-3"> 
+        <h4>Education</h4>
+        <ul> sri-lankan education is the most bullshit education
+            <li>kkk</li>
+        </ul>
+    </div> -->
+
+    </div>
+    <br>
+
+
+    <div class="bottomrow">
+        <a href="https://www.youtube.com/channel/UCEGisb3xpJ6SS6VCKs9ZT6A">YouTube.Me</a>
+        <a href="#">instagram</a>
+        <a href="#">test</a>
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
